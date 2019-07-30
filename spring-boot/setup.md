@@ -125,7 +125,7 @@ package com.example.demo;
 </dependencies>
 ```
 
-2. 修改 log4j2.xml 的配置，添加新的 Appender。
+2. 修改 log4j2.xml 的配置，添加新的 Appender。注意给 Appender 添加日志的记录级别，筛选掉应用程序不必要的日志，这里设置为 `level="info"`。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
