@@ -29,9 +29,9 @@
 </dependency>
 ```
 
-2. 在项目的 application.properties 文件中添加以下属性。
+2. 在项目的 application.properties 文件中添加以下属性（如果是yaml文件转化成层级结构）。
 
-> 有关更详细的配置信息，请查看 <https://github.com/Microsoft/ApplicationInsights-Java/blob/master/azure-application-insights-spring-boot-starter/README.md>
+> 此处为中国版的 Azure 与国际版的有所不同，需要设置专有的 endpoint，获取更多关于 [endpoint](https://docs.microsoft.com/bs-latn-ba/azure/azure-monitor/app/custom-endpoints?view=aspnetcore-3.0#regions-that-require-endpoint-modification) 的相关配置。有关更详细的配置信息，请查看 <https://github.com/Microsoft/ApplicationInsights-Java/blob/master/azure-application-insights-spring-boot-starter/README.md>
 
 ```properties
 # Specify the instrumentation key of your Application Insights resource.
@@ -159,6 +159,6 @@ package com.example.demo;
 <dependency>
     <groupId>javax.xml.bind</groupId>
     <artifactId>jaxb-api</artifactId>
-    <version>2.3.0</version>
+    <version>2.2.8</version>
 </dependency>
 ```
