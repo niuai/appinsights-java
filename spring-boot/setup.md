@@ -153,7 +153,7 @@ package com.example.demo;
 
 运行应用程序，等待一段时间后，在 Azure 的管理页面的 App Insights 资源可以查看到对应的日志信息。
 
-> *如果 java jdk 的版本过高，可能会遇到程序运行失败的情况，此时在 POM.xml 中添加如下依赖项*
+> *如果 java jdk 的版本过高，可能会遇到程序运行失败的情况（大概是因为 Java SE 9.0 中不再包含 Java EE 的指定包，参考 <https://blog.csdn.net/hadues/article/details/79188793>），此时在 POM.xml 中添加如下依赖项*
 
 ```xml
 <dependency>
