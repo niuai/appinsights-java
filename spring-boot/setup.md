@@ -31,6 +31,8 @@
 
 2. 在项目的 application.properties 文件中添加以下属性。
 
+> 有关更详细的配置信息，请查看 <https://github.com/Microsoft/ApplicationInsights-Java/blob/master/azure-application-insights-spring-boot-starter/README.md>
+
 ```properties
 # Specify the instrumentation key of your Application Insights resource.
 azure.application-insights.instrumentation-key=[your ikey from the resource]
