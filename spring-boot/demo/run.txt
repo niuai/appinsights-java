@@ -1,0 +1,4 @@
+
+docker run -i -t --rm -p 8080:8080 -v D:\repository\GitHub\appinsights-java\spring-boot\demo:/test openjdk:8-jdk-alpine
+
+java -javaagent:applicationinsights-agent-2.4.0-BETA-SNAPSHOT.jar -jar target/demo-0.0.1-SNAPSHOT.jar
