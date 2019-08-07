@@ -25,7 +25,7 @@
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>applicationinsights-spring-boot-starter</artifactId>
-    <version>1.1.1</version>
+    <version>1.2.0-BETA</version>
 </dependency>
 ```
 
@@ -114,7 +114,7 @@ package com.example.demo;
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>applicationinsights-spring-boot-starter</artifactId>
-        <version>1.1.1</version>
+        <version>1.2.0-BETA</version>
     </dependency>
 
     <dependency>
