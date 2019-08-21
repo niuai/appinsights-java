@@ -1,7 +1,6 @@
 # JavaScript 集成 Azure（中国） App Insights
 
-> 如果还没有创建 appinsights 资源，请先创建: [创建 Azure App Insights 资源](../spring-boot/setup.md#创建-azure-app-insights-资源)
-<br />
+> 如果还没有创建 appinsights 资源，请先创建: [创建 Azure App Insights 资源](../spring-boot/setup.md#创建-azure-app-insights-资源)<br />
 > 参考文档：https://docs.microsoft.com/en-us/azure/azure-monitor/app/javascript
 
 1. 创建空的 web（webpack） 项目，并添加基础依赖和用于集成 appinsights 的 `@microsoft/applicationinsights-web` 依赖：
