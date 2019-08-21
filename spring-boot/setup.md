@@ -1,5 +1,7 @@
 # Spring Boot 集成 Azure（中国） App Insights
 
+> 参考文档：https://docs.microsoft.com/en-us/azure/azure-monitor/app/java-get-started
+
 ## 创建 Azure App Insights 资源
 
 1. 浏览到位于 <https://portal.azure.cn/> 的 Azure（中国）门户，定位到 Application Insights，然后单击新建。

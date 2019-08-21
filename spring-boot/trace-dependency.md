@@ -1,6 +1,8 @@
 # App Insights（Java） 记录外部依赖（dependency）数据
 
 > 如果还没有添加基础的依赖包，以及基本的 trace，request 的记录，请先阅读[这篇文章](setup.md)来搭建基础框架。
+<br />
+> 参考文档：https://docs.microsoft.com/en-us/azure/azure-monitor/app/java-agent
 
 ## 创建数据库（MSSQL）并利用 Hibenate 来查询数据库
 
