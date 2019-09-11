@@ -7,7 +7,9 @@ public class CloudRoleNameInitializer extends WebTelemetryInitializerBase {
 
     @Override
     protected void onInitializeTelemetry(Telemetry telemetry) {
-        telemetry.getContext().getCloud().setRoleInstance("My Role Instance");
+        String computerName = System.getenv().get("COMPUTERNAME");
+
+        telemetry.getContext().getCloud().setRoleInstance(computerName);
         telemetry.getContext().getDevice().setId("My Device Instance");
         telemetry.getContext().getInternal().setNodeName("My Node Name");
     }
