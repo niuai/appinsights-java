@@ -42,7 +42,8 @@ import { ApplicationInsights } from '@microsoft/applicationinsights-web'
 const appInsights = new ApplicationInsights({
   config: {
     instrumentationKey: '84312bff-xxxx-xxxx-xxxx-31a57071fd0b',
-    endpointUrl: 'https://dc.applicationinsights.azure.cn/v2/track'
+    endpointUrl: 'https://dc.applicationinsights.azure.cn/v2/track',
+    enableAutoRouteTracking: true
   }
 });
 

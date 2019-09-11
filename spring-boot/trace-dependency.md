@@ -115,7 +115,7 @@ spring.jpa.hibernate.ddl-auto = none
 
 ## 使用 applicationinsights-agent 来跟踪外部依赖项
 
-1. 下载 applicationinsights-agent-2.4.0-BETA-SNAPSHOT.jar（可以在 demo 目录中找到） 到程序根目录，添加 AI-Agent.xml 文件（该配置目前尚不清楚具体的意思。。。）
+1. 下载 applicationinsights-agent-2.4.0-BETA-SNAPSHOT.jar（可以在 demo 目录中找到） 到程序根目录，添加 AI-Agent.xml 文件（注意该配置文件要与 agent.jar 在同一目录）
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
