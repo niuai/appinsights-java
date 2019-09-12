@@ -7,21 +7,7 @@
 ![cloud role instance](images/cloud-role-instance.png)
 ![telemetry model](images/telemetry-model.png)
 
-1. 添加以下依赖
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-autoconfigure</artifactId>
-    <version>2.1.8.RELEASE</version>
-</dependency>
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-context</artifactId>
-    <version>5.1.9.RELEASE</version>
-</dependency>
-```
-
-2. 添加 telemetry 初始化类
+1. 添加 telemetry 初始化类
 
 > 参考链接：<br />
 > https://github.com/microsoft/ApplicationInsights-Java/issues/632 <br />
@@ -30,34 +16,47 @@
 ```java
 package com.example.demo.configuration;
 
+import com.microsoft.applicationinsights.extensibility.TelemetryInitializer;
 import com.microsoft.applicationinsights.telemetry.Telemetry;
 import com.microsoft.applicationinsights.web.extensibility.initializers.WebTelemetryInitializerBase;
 
-public class CloudRoleNameInitializer extends WebTelemetryInitializerBase {
+public class CloudRoleNameInitializer implements  TelemetryInitializer  {
 
     @Override
-    protected void onInitializeTelemetry(Telemetry telemetry) {
+    public void initialize(Telemetry telemetry) {
         String computerName = System.getenv().get("COMPUTERNAME");
         telemetry.getContext().getCloud().setRoleInstance(computerName);
     }
 }
 ```
 
-3. 在初始类中使用该类
+2. 在启动类（Application.java）中使用该类
+
 ```java
 package com.example.demo;
 
-import com.example.demo.configuration.CloudRoleNameInitializer;
-import com.microsoft.applicationinsights.extensibility.TelemetryInitializer;
+import java.util.Arrays;
+
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import com.microsoft.applicationinsights.extensibility.TelemetryInitializer;
+
 @SpringBootApplication
-public class DemoApplication {
+public class Application extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(Application.class);
+    }
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Bean
